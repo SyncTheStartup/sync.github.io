@@ -17,8 +17,9 @@ processed_events = set()
 flow = InstalledAppFlow.from_client_secrets_file(
     'client_secret_131606957380-u4ikuhues6u5s60dtueah3mgncn9u2u1.apps.googleusercontent.com.json', 
     scopes=['https://www.googleapis.com/auth/calendar.readonly'],
-    redirect_uri='http://localhost:5000/login'  # Redirect to login after Google authorization
+    redirect_uri='https://syncai.app/login'
 )
+
 
 # Function to get Google Calendar URL
 def get_google_calendar_url(credentials):
