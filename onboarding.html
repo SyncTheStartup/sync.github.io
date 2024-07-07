@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static\css\styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital@0;1&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Onboarding page</title>
+</head>
+<body>
+<header>
+    <img src="static\Images\SyncLogo.png" alt="Sync Logo"/>
+</header>
+<header>
+    <div class="header-content">
+        Welcome to Sync!! We are excited to help you with your goals and hope you find the app helpful.
+        Please complete this one-time onboarding survey that should take you less than 10 minutes in order
+        for us to understand your relationship with energy.
+    </div>
+</header>
+    <main>
+        <form action = "/onboarding" method = "post">
+
+            <h3>Relationship with Scheduling:</h3>
+            <select id = "scheduling" name = "scheduling" class="styled-dropdown">
+                <option>- Select -</option>
+                <option>I feel stressed when there are many events (>5) scheduled on my calendar.</option>
+                <option>I am very organized</option>
+                <option>I am very spontaneous and am comfortable with change</option>
+            </select>
+
+            <h3>Mental Health</h3>
+            <p>My mental health (diagnosed or undiagnosed conditions) significantly impact my daily energy levels? </p>
+            <select id = "mentalHealth" name = "mentalHealth" class="styled-dropdown">
+                <option>- Select -</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+            <h3></h3>
+            <p>Optional: how does your mental health impact your energy levels (e.g. feel low energy on rainy days)</p>
+            <input class="styled-text" type="text" placeholder="Please elaborate">
+
+            <h3>How events impact energy level – (1 for completely drained, 5 for full recharge)</h3>
+                <table class="energy-matrix">
+                    <tr>
+                        <th> </th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                    </tr>
+                    <tr>
+                        <td>Party/Concert/Rave/Large Dinners etc</td>
+                        <td><input type="radio" id = "largeParties" name="Party/Concert/Rave/Large Dinners etc" value="1"></td>
+                        <td><input type="radio" id = "largeParties" name="Party/Concert/Rave/Large Dinners etc" value="2"></td>
+                        <td><input type="radio" id = "largeParties" name="Party/Concert/Rave/Large Dinners etc" value="3"></td>
+                        <td><input type="radio" id = "largeParties" name="Party/Concert/Rave/Large Dinners etc" value="4"></td>
+                        <td><input type="radio" id = "largeParties" name="Party/Concert/Rave/Large Dinners etc" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Networking Events</td>
+                        <td><input type="radio" name="Networking Events" value="1"></td>
+                        <td><input type="radio" name="Networking Events" value="2"></td>
+                        <td><input type="radio" name="Networking Events" value="3"></td>
+                        <td><input type="radio" name="Networking Events" value="4"></td>
+                        <td><input type="radio" name="Networking Events" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Friend/People Familiar With</td>
+                        <td><input type="radio" name="Friend/people familiar with" value="1"></td>
+                        <td><input type="radio" name="Friend/people familiar with" value="2"></td>
+                        <td><input type="radio" name="Friend/people familiar with" value="3"></td>
+                        <td><input type="radio" name="Friend/people familiar with" value="4"></td>
+                        <td><input type="radio" name="Friend/people familiar with" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>New People/People Less Familiar With </td>
+                        <td><input type="radio" name="New People/People Less Familiar With" value="1"></td>
+                        <td><input type="radio" name="New People/People Less Familiar With" value="2"></td>
+                        <td><input type="radio" name="New People/People Less Familiar With" value="3"></td>
+                        <td><input type="radio" name="New People/People Less Familiar With" value="4"></td>
+                        <td><input type="radio" name="New People/People Less Familiar With" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Zoom/Virtual Meetings</td>
+                        <td><input type="radio" name="Zoom/Virtual Meetings" value="1"></td>
+                        <td><input type="radio" name="Zoom/Virtual Meetings" value="2"></td>
+                        <td><input type="radio" name="Zoom/Virtual Meetings" value="3"></td>
+                        <td><input type="radio" name="Zoom/Virtual Meetings" value="4"></td>
+                        <td><input type="radio" name="Zoom/Virtual Meetings" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>In-Person Meetings</td>
+                        <td><input type="radio" name="In-Person Meetings" value="1"></td>
+                        <td><input type="radio" name="In-Person Meetings" value="2"></td>
+                        <td><input type="radio" name="In-Person Meetings" value="3"></td>
+                        <td><input type="radio" name="In-Person Meetings" value="4"></td>
+                        <td><input type="radio" name="In-Person Meetings" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Lectures</td>
+                        <td><input type="radio" name="Lectures" value="1"></td>
+                        <td><input type="radio" name="Lectures" value="2"></td>
+                        <td><input type="radio" name="Lectures" value="3"></td>
+                        <td><input type="radio" name="Lectures" value="4"></td>
+                        <td><input type="radio" name="Lectures" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Seminar Classes</td>
+                        <td><input type="radio" name="Seminar Classes" value="1"></td>
+                        <td><input type="radio" name="Seminar Classes" value="2"></td>
+                        <td><input type="radio" name="Seminar Classes" value="3"></td>
+                        <td><input type="radio" name="Seminar Classes" value="4"></td>
+                        <td><input type="radio" name="Seminar Classes" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Homework</td>
+                        <td><input type="radio" name="Homework" value="1"></td>
+                        <td><input type="radio" name="Homework" value="2"></td>
+                        <td><input type="radio" name="Homework" value="3"></td>
+                        <td><input type="radio" name="Homework" value="4"></td>
+                        <td><input type="radio" name="Homework" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Extracurricular Activities (add option where user can share what clubs stress/recharge them)</td>
+                        <td><input type="radio" name="Extracurricular Activities (add option where user can share what clubs stress/recharge them)" value="1"></td>
+                        <td><input type="radio" name="Extracurricular Activities (add option where user can share what clubs stress/recharge them)" value="2"></td>
+                        <td><input type="radio" name="Extracurricular Activities (add option where user can share what clubs stress/recharge them)" value="3"></td>
+                        <td><input type="radio" name="Extracurricular Activities (add option where user can share what clubs stress/recharge them)" value="4"></td>
+                        <td><input type="radio" name="Extracurricular Activities (add option where user can share what clubs stress/recharge them)" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Working Out</td>
+                        <td><input type="radio" name="Working Out" value="1"></td>
+                        <td><input type="radio" name="Working Out" value="2"></td>
+                        <td><input type="radio" name="Working Out" value="3"></td>
+                        <td><input type="radio" name="Working Out" value="4"></td>
+                        <td><input type="radio" name="Working Out" value="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Procrastinating</td>
+                        <td><input type="radio" name="Procrastinating" value="1"></td>
+                        <td><input type="radio" name="Procrastinating" value="2"></td>
+                        <td><input type="radio" name="Procrastinating" value="3"></td>
+                        <td><input type="radio" name="Procrastinating" value="4"></td>
+                        <td><input type="radio" name="Procrastinating" value="5"></td>
+                    </tr>
+                </table>
+
+            
+            <h2>Lifestyle</h2>
+            <h3>Sleep</h3>
+            <p>How many hours of sleep do you feel is required for you to function optimally (Scale 5-12 hours)</p>
+            <div class="sleep-question-labels">
+                <div class="range-labels">
+                    <span>5</span> <span>6</span> <span>7</span> <span>8</span> <span>9</span> <span>10</span> <span>11</span> <span>12</span>
+                </div>
+                <input type="range" id="sleepNeeded" name="sleepHoursreq" min="5" max="12" value="8" step="1" class="sleep-question-range">
+            </div>
+            <p>How many hours of sleep do you regularly get during the week (Scale 5-12 hours)</p>
+            <div class="sleep-question-labels">
+                <div class="range-labels">
+                    <span>5</span> <span>6</span> <span>7</span> <span>8</span> <span>9</span> <span>10</span> <span>11</span> <span>12</span>
+                </div>
+                <input type="range" id="sleepHours" name="sleepHoursreg" min="5" max="12" value="8" step="1" class="sleep-question-range">
+            </div>
+
+            <p>I consistently get enough sleep to feel rested and complete my day’s tasks</p>
+            <select id = "sleep" name = "sleep" class="styled-dropdown">
+                <option>- Select -</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+            <p>I take naps throughout the day, and they are necessary for me to get through my day</p>
+            <select id = "naps" name = "naps" class="styled-dropdown">
+                <option>- Select -</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+
+            <h3>Physical Activity and Meditation</h3>
+            <p>What type of lifestyle do you live (scale 1-5; sedentary to very active)</p>
+            <div class="sleep-question-labels">
+                <div class="range-labels">
+                    <span>1</span> <span>2</span> <span>3</span> <span>4</span> <span>5</span>
+                </div>
+                <input type="range" id="activeness" name="activeness" min="1" max="5" value="5" step="1" class="sleep-question-range">
+            </div>
+            <p>I meditate and find it helpful in maintaining healthy levels of energy</p>
+            <select id = "meditation" name = "meditation" class="styled-dropdown">
+                <option>- Select -</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+
+            <h3>Health Habits</h3>
+            <p>Do you have any health issues that wouhealthIssues impact your energy levels</p>
+            <input class="styled-text" type="text" name = "healthIssues" placeholder="Please elaborate">
+            <p>My dietary habits positively support my energy levels throughout the day</p>
+            <select id = "dietary" name = "dietary" class="styled-dropdown">
+                <option>- Select -</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+
+            <p>I rely on caffeine to keep me energized throughout the day</p>
+            <select id = "caffeine" name = "caffeine" class="styled-dropdown">
+                <option>- Select -</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+
+            <p># cups of coffee consumed per day (recommended is 2 cups of coffee a day for adults)</p>
+            <select id = "coffee" name = "coffee" class="styled-dropdown">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+
+            <p>I use other drugs (alcohol, marijuana, etc.) that effect my energy levels</p>
+            <select id = "drugs" name = "drugs" class="styled-dropdown">
+                <option>- Select -</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+
+            <!-- Optional: Goal setting – future functionality to build out for event suggestion/goal setting tabs 
+                Working Out
+                Socializing
+                Self-care
+                Diet
+                Productivity -->
+            
+
+            <!-- <h3>Event Suggestion</h3>
+            <p>What strategies do you use to recharge after draining your energy?</p>
+            Fix the dot in front of the checkboxes they look ugly  
+                <ul>
+                    <label class="checkbox-label">
+                        Short Breaks/Rests
+                        <input type="checkbox" id="shortBreaks" name = "shortBreaks" value="shortBreaks" class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                    </label>
+                    <label class="checkbox-label">
+                        Physical Activity
+                        <input type="checkbox" id="physicalActivity" name = "physicalActivity" value="physicalActivity" class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                    </label>
+                    <label class="checkbox-label">
+                        Social Interaction
+                        <input type="checkbox" id="socialInteraction" name = "socialInteraction" value="socialInteraction" class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                    </label>
+                    <label class="checkbox-label">
+                        Other:
+                        <input type="checkbox" id="otherEvents" name = "otherEvents" value="otherEvents" class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                        <input class="styled-text-small " type="text" placeholder="Please elaborate">
+                    </label>
+                </ul>
+
+            <p>What types of physical activities do you engage in? (if interest is indicated above) </p>
+                <ul>
+                    <label class="checkbox-label">
+                        Gym Workouts
+                        <input type="checkbox" id="gym" name = "gym" value="gym" class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                    </label>
+                    <label class="checkbox-label">
+                        Outdoor Activities (hiking, biking, etc.)
+                        <input type="checkbox" id="outdoorActivity" name = "outdoorActivity" value="outdoorActivity" class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                    </label>
+                    <label class="checkbox-label">
+                        Team Sports
+                        <input type="checkbox" id="teamSports" name = "teamSports" value="teamSports" class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                    </label>
+                    <label class="checkbox-label">
+                        Yoga/Meditation
+                        <input type="checkbox" id="yogaMeditation" name = "yogaMeditation" value="yogaMeditation" class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                    </label>
+                    <label class="checkbox-label">
+                        Other:
+                        <input type="checkbox" id="otherPhysical" name = "otherPhysical" value="otherPhysical" class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                        <input class="styled-text-small " type="text" placeholder="Please elaborate">
+                    </label>
+                </ul>
+
+            <p>What effective strategies do you use to gain energy if you feel low-energy?</p>
+                <ul>
+                    <label class="checkbox-label">
+                        Creative Hobbies (painting, reading, making/listening to music, etc.)
+                        <input type="checkbox" id="creativeHobbies" name = "creativeHobbies" value="creativeHobbies" class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                    </label>
+                    <label class="checkbox-label">
+                        Engage in Physical Activities (working out, walking, etc.)
+                        <input type="checkbox" id="engagePhysical" name = "engagePhysical" value="engagePhysical" class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                    </label>
+                    <label class="checkbox-label">
+                        Spend Time in Nature or Outdoors
+                        <input type="checkbox" id="nature" name = "nature" value="nature" class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                    </label>
+                    <label class="checkbox-label">
+                        Exploring New Places/Traveling/Small Adventures
+                        <input type="checkbox" id="exploring" name = "exploring" value="exploring" class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                    </label>
+                    <label class="checkbox-label">
+                        Hang Out With Friends
+                        <input type="checkbox" id="hangout" name = "hangout" value="hangout" class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                    </label>
+                    <label class="checkbox-label">
+                        Sleeping/Napping
+                        <input type="checkbox" id="sleepNapping" name = "sleepNapping" value="sleepNapping" class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                    </label>
+                    <label class="checkbox-label">
+                        Other:
+                        <input type="checkbox" id="otherEnergy" name = "otherEnergy" value="otherEnergy" class="checkbox-input">
+                        <span class="checkbox-custom"></span>
+                        <input class="styled-text-small " type="text" placeholder="Please elaborate">
+                    </label>
+                </ul> -->
+
+            <form method="POST">
+                <button class="styled-button" type="submit"> Next </button>
+            </form>
+        </form>
+    </main>
+
+</body>
+</html>
