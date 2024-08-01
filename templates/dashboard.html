@@ -1,0 +1,165 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Calendar</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Event</th>
+        </tr>
+        {% for event in events %}
+        <tr>
+            <td>{{ event.start.dateTime }}</td>
+            <td>{{ event.summary }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #calendar {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        iframe {
+            border: 0;
+            width: 100%;
+            height: 600px; /* Adjust height as needed */
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Calendar</h1>
+    <iframe src="{{ google_calendar_url }}" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    <h2>Average Score for Current Week: {{ average_score }}</h2>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #calendar {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        iframe {
+            border: 0;
+            width: 100%;
+            height: 600px; /* Adjust height as needed */
+        }
+        .battery {
+            width: 50px; /* Adjust battery size */
+            height: 20px;
+            border: 1px solid black;
+            position: relative;
+        }
+        .battery-level {
+            height: 100%;
+            background-color: #4CAF50; /* Green */
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Calendar</h1>
+    <div class="battery">
+        <div class="battery-level" style="width: {{ 100 - average_score }}%"></div>
+    </div>
+    <iframe src="{{ google_calendar_url }}" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    <h2>Average Score for Current Week: {{ average_score }}</h2>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center; /* Center align the content */
+        }
+        #calendar {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        iframe {
+            border: 0;
+            width: 100%;
+            height: 600px; /* Adjust height as needed */
+        }
+        .battery-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px; /* Add some space below the battery */
+        }
+        .battery {
+            width: 100px; /* Adjust battery size */
+            height: 40px;
+            border: 1px solid black;
+            position: relative;
+            margin-right: 10px; /* Add some space between battery and iframe */
+        }
+        .battery-level {
+            height: 100%;
+            background-color: #4CAF50; /* Green */
+            position: absolute;
+            bottom: 0;
+            left: 0; /* Align to left */
+        }
+        .average-score {
+            margin-top: 10px; /* Add space between battery and score */
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Calendar</h1>
+    <div class="battery-container">
+        <div class="battery">
+            <div class="battery-level" style="width: {{ 100 - average_score }}%"></div>
+        </div>
+        <span class="average-score">Average Score for Current Week: {{ average_score }}</span>
+    </div>
+    <iframe src="{{ google_calendar_url }}" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</body>
+</html>
